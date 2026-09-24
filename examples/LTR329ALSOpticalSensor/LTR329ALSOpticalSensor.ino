@@ -78,7 +78,10 @@ void loop()
 			uint ch0, ch1;
 			if (ltr329.readRawData(&ch0, &ch1)) {
 				float lux = ltr329.calculateLux(ch0, ch1);
-
+				
+				// if %f is not supported, use the floatToString() function which you can find here:
+				// https://github.com/mumanchu/mumanchu/blob/main/utils/Float.cpp
+				
 				sprintf(buf, "lux=%f  ch0=%u  ch1=%u  dataValid=%s  gain=%u",
 					lux, ch0, ch1, dataInvalid ? "false" : "true", measurementGain);
 				Serial.println(buf);
