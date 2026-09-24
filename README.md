@@ -19,6 +19,8 @@ The library can be installed in the Arduino IDE by downloading the ZIP file, and
 
 For full details, refer to the comments in the source code.
 
+The example sketch uses `sprintf(buf, "%f", ...)` for floats. If your setup does not support this, use the `floatToString()` function which you can find here: https://github.com/mumanchu/mumanchu/blob/main/utils/Float.cpp
+
 ```cpp
 class LTR329ALSOpticalSensor
 {
