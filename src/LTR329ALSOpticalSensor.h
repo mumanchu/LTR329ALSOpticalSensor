@@ -224,7 +224,10 @@ float LTR329ALSOpticalSensor::calculateLux(uint ch0, uint ch1)
 {
 	// saturation/overflow
 	if (ch0 >= 0xffff || ch1 >= 0xffff)
-		return 0xffff;
+		return 65535.0f;	// 0xffff
+	// prevent divide by zero
+	if (ch0 == 0.0f && ch1 == 0.0f)
+		return 0.0f;
 
 	/* p20
 	   RATIO = CH1/(CH0+CH1)
