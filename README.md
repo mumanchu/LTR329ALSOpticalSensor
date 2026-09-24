@@ -16,7 +16,7 @@ The Adafruit library is not so good, so this new library was developed, which ha
 
 ## Installation
 
-The library can be installed in the Arduino IDE by downloading the ZIP file, and using 'Sketch / Include Library > Add ZIP Library...' This installs the library and the example sketch. Open the example sketch with 'File / Examples / Example from custom libraries'.
+The library can be installed in the Arduino IDE by downloading the ZIP file from github via the green 'Code' button. Install the library and example sketch from the Arduino IDE with 'Sketch / Include Library > Add ZIP Library...'. Open the example sketch with 'File / Examples / Example from custom libraries'.
 
 
 ## Class Reference
